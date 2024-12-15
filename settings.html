@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Settings</title>
+  <link rel="stylesheet" href="./css/settings.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html"><img src="./google.png" alt="Google Logo" style="width: 120px; height: 40px;"></a>
+    <div>
+      <a href="settings.html">Settings</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Settings</h1>
+
+
+    <div class="settings-option">
+      <label for="font-style">Choose Font Style:</label>
+      <select id="font-style">
+        <option value="'Press Start 2P', cursive">Retro</option>
+        <option value="'Courier New', monospace">Monospace</option>
+        <option value="'Arial', sans-serif">Classic</option>
+      </select>
+    </div>
+
+
+    <div class="settings-option">
+      <label for="background-color">Background Color:</label>
+      <select id="background-color">
+        <option value="#ffe38d">Light Yellow</option>
+        <option value="#aeffa8">Mint Green</option>
+        <option value="#d4e0ff">Light Blue</option>
+      </select>
+    </div>
+
+
+    <button class="save-btn" onclick="saveSettings()" style="font-family: 'Press Start 2P', cursive;">Save Settings</button>
+
+
+    <div class="gmail-section">
+      <h2>Create Your New Gmail Account</h2>
+      <p>Sign up today to experience the classic feel of a Gmail account!</p>
+
+
+      <div class="gmail-gif-container">
+        <img src="https://media.giphy.com/media/IQzFAfOGMZbKcdtJqf/giphy.gif?cid=ecf05e47t5hfvf7lgrd6h4r4lb4x1779k1vk5cem2e0inx8d&ep=v1_gifs_search&rid=giphy.gif&ct=g" class="gmail-gif" alt="Colorful Gmail GIF">
+      </div><br>
+      <button class="gmail-btn" onclick="createGmailAccount()"  style="font-family: 'Press Start 2P', cursive;">Create Account</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Copyright &copy; 1998 Google Inc. | <a href="./maintenance.html">Privacy Policy</a> | <a href="./maintenance.html">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    function saveSettings() {
+      const fontStyle = document.getElementById("font-style").value;
+      const bgColor = document.getElementById("background-color").value;
+
+
+      document.body.style.backgroundColor = bgColor;
+      document.body.style.color = "#000000";
+      document.body.style.fontFamily = fontStyle;
+
+      alert("Settings saved! Refresh to see changes on other pages.");
+    }
+
+
+    function createGmailAccount() {
+      alert("Congratulations! Your new Gmail account has been created successfully. Enjoy your retro experience!");
+    }
+  </script>
+</body>
+
+</html>
