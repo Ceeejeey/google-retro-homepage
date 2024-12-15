@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Search Results</title>
+   <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="./google.png" alt="Google Logo" style="width: 120px; height: 40px;"></a>
+        <div>
+            <a href="#">Gmail</a>
+            <a href="#">Images</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <img src="./google.png" alt="Google Logo">
+        </div>
+
+        <div class="search-bar">
+            <form action="result.html" method="get">
+                <input type="text" name="q" placeholder="Search again"><br><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <h2 id="search-query" style="text-align: center;">Results for: </h2>
+        <div id="search-results" class="results"></div>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright &copy; 1998 Google Inc. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        
+        const mockResults = {
+            "retro": [
+                { title: "Retro Vibes - Aesthetic Designs", url: "https://example.com/retro-vibes" },
+                { title: "Top 10 Retro Video Games", url: "https://example.com/retro-games" },
+                { title: "Retro Fashion Trends", url: "https://example.com/retro-fashion" }
+            ],
+            "google": [
+                { title: "History of Google", url: "https://example.com/google-history" },
+                { title: "Google Products and Services", url: "https://example.com/google-products" },
+                { title: "Top Google Tricks You Should Know", url: "https://example.com/google-tricks" }
+            ],
+            "css": [
+                { title: "CSS Basics - A Beginner's Guide", url: "https://example.com/css-basics" },
+                { title: "CSS Retro Styles", url: "https://example.com/css-retro" },
+                { title: "Advanced CSS Techniques", url: "https://example.com/css-advanced" }
+            ]
+        };
+
+       
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q");
+
+        
+        const searchQueryEl = document.getElementById("search-query");
+        const resultsContainer = document.getElementById("search-results");
+
+        if (query) {
+            searchQueryEl.textContent = `Results for: "${query}"`;
+
+           
+            const results = mockResults[query.toLowerCase()] || [];
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement("div");
+                    resultItem.className = "result-item";
+                    resultItem.innerHTML = `<a href="${result.url}" target="_blank">${result.title}</a>`;
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.innerHTML = `<p>No results found for "${query}".</p>`;
+            }
+        } else {
+            searchQueryEl.textContent = "No search query provided.";
+            resultsContainer.innerHTML = `<p>Please enter a search query.</p>`;
+        }
+    </script>
+</body>
+</html>
