@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  background: #ffe38d;
+  font-family: 'Press Start 2P', cursive;
+  text-align: left;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7d4d4;
+  padding: 15px 30px;
+  border-bottom: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.navbar a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #aeffa8;
+  border: 4px solid #000000;
+  box-shadow: 5px 6px 0px #000000;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.settings-option {
+  margin-bottom: 20px;
+}
+
+.settings-option label {
+  font-size: 14px;
+}
+
+.settings-option select {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 5px;
+  border: 3px solid #000000;
+  background-color: #f7e0d4;
+  border-radius: 4px;
+  color: #000000;
+  margin-left: 10px;
+}
+
+.save-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 3px solid #000000;
+  background-color: #ffe599;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.save-btn:hover {
+  background-color: #a0abff;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #f7d4d4;
+  text-align: center;
+  border-top: 4px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.footer a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.gmail-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.gmail-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gmail-btn:hover {
+  background-color: #ffbb33;
+}
+
+.gmail-gif-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gmail-gif {
+  width: 120px;
+  height: 120px;
+
+}
